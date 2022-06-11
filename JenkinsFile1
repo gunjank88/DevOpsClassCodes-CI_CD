@@ -29,12 +29,12 @@ pipeline{
                 bat 'mvn test'
             }
         }
-        #stage('MetricCheck'){
-         #   agent any
-          #  steps{
-           #     bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
-            #}
-        #}
+       // stage('MetricCheck'){
+            agent any
+            steps{
+                bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+            }
+        }//
         stage('Package'){
             agent any
             steps{
