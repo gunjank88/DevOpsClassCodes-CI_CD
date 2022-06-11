@@ -1,14 +1,14 @@
 changesdonepipeline{
     tools{
-        jdk 'myjava'
-        maven 'mymaven131'
+        jdk 'My JAVA'
+        maven 'maven'
     }
     agent any
     stages{
         stage('Checkout on git'){
             agent any
             steps{
-                git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
+                git 'https://github.com/gunjank88/DevOpsClassCodes-CI_CD.git'
             }
         }
         stage('Compile'){
